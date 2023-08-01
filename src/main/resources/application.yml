@@ -1,3 +1,18 @@
-Spring:
-  datasourse:
-    url: jdb
+spring:
+  datasource:
+    url: jdbc:h2:mem:agendaBd
+    username: admin
+    password: admin
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8080
+
